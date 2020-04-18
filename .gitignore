@@ -5,3 +5,7 @@ pelican-themes
 *.pid
 pelican/output
 *.pyc
+
+# IDE
+.idea/
+.vscode/
