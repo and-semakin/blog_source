@@ -1,5 +1,7 @@
 AUTHOR = 'and-semakin'
 SITENAME = 'Питонические атаки'
+SITESUBTITLE = 'Блог Андрея Семакина'
+SHOW_SOCIAL_ON_INDEX_PAGE_HEADER = True
 SITEURL = ''
 
 PATH = 'content'
@@ -20,8 +22,9 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
          ('Python.org', 'http://python.org/'),)
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+SOCIAL = (('github', 'https://github.com/and-semakin'),
+          ('telegram', 'https://t.me/bro0ke'),
+          ('twitter', 'https://twitter.com/and_semakin'),)
 
 DEFAULT_PAGINATION = 10
 
@@ -29,3 +32,4 @@ DEFAULT_PAGINATION = 10
 RELATIVE_URLS = True
 
 THEME = 'themes/pelican-clean-blog'
+COLOR_SCHEME_CSS = 'monokai.css'
