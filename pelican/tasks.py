@@ -107,4 +107,3 @@ def publish(c):
         '{} {ssh_user}@{ssh_host}:{ssh_path}'.format(
             CONFIG['deploy_path'].rstrip('/') + '/',
             **CONFIG))
-
