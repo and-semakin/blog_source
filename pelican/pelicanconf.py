@@ -1,5 +1,5 @@
 AUTHOR = 'and-semakin'
-SITENAME = 'Питонические заметки'
+SITENAME = 'Питонические атаки'
 SITEURL = ''
 
 PATH = 'content'
