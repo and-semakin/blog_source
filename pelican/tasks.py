@@ -1,12 +1,8 @@
-# -*- coding: utf-8 -*-
-
 import os
 import shutil
 import sys
-import datetime
 
 from invoke import task
-from invoke.util import cd
 from pelican.server import ComplexHTTPRequestHandler, RootedHTTPServer
 from pelican.settings import DEFAULT_CONFIG, get_settings_from_file
 
