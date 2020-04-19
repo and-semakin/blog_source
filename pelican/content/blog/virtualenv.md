@@ -1,8 +1,6 @@
 Title: Виртуальные окружения в Python
 Slug: python_virtualenv
 Tags: python, pip, venv, virtualenv
-Date: 2020-04-18 12:00
-Modified: 2020-04-19 12:30
 Summary: Почему всегда нужно использовать виртуальные окружения и как правильно их готовить.
 Status: published
 

@@ -58,7 +58,7 @@ COLOR_SCHEME_CSS = 'monokai.css'
 UTTERANCES_REPO = 'and-semakin/and-semakin.github.io'
 
 PLUGIN_PATHS = ["plugins"]
-PLUGINS = ["sitemap", "deadlinks"]
+PLUGINS = ["sitemap", "deadlinks", "filetime_from_git"]
 
 SITEMAP = {
     'format': 'xml',
@@ -81,3 +81,5 @@ DEADLINK_OPTS = {
     'timeout_duration_ms': 10000,
     'timeout_is_error': True,
 }
+
+GIT_FILETIME_FROM_GIT = True
