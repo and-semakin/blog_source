@@ -14,8 +14,18 @@ PAGE_SAVE_AS = 'pages/{slug}/index.html'
 PAGE_URL = 'pages/{slug}/'
 DISPLAY_PAGES_ON_MENU = True
 
-STATIC_PATHS = ['static', 'pages']
+STATIC_PATHS = ['static', 'extra', 'pages']
+EXTRA_PATH_METADATA = {
+    'extra/favicon_16.png': {'path': 'favicon_16.png'},
+    'extra/favicon_24.png': {'path': 'favicon_24.png'},
+    'extra/favicon_32.png': {'path': 'favicon_32.png'},
+    # 'extra/CNAME': {'path': 'CNAME'},
+    # 'extra/LICENSE': {'path': 'LICENSE'},
+    # 'extra/README': {'path': 'README'},
+}
 
+DEFAULT_CATEGORY = 'blog'
+DISPLAY_CATEGORIES_ON_MENU = False
 DEFAULT_METADATA = {
     'status': 'draft',
 }
