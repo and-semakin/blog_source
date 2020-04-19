@@ -1,6 +1,6 @@
 AUTHOR = 'and-semakin'
 SITENAME = 'Питонические атаки'
-SITESUBTITLE = 'Блог Андрея Семакина'
+SITESUBTITLE = 'Про разработку в целом и в частности про Python'
 SHOW_SOCIAL_ON_INDEX_PAGE_HEADER = True
 SITEURL = ''
 
