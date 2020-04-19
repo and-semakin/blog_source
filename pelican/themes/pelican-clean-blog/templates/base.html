@@ -13,7 +13,7 @@
 
         <title>{% block title %}{{ SITENAME }}{% if SITESUBTITLE and SHOW_SITESUBTITLE_IN_HTML %} - {{ SITESUBTITLE }}{% endif %}{% endblock title %}</title>
 
-    {% for name,link in SOCIAL if name in ['rss', 'rss-square'] %}
+    {% for name, link in SOCIAL if name in ['rss', 'rss-square'] %}
         <link href="{{ link }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />
     {% else %}
         {% if FEED_ALL_ATOM %}
