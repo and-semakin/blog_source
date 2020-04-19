@@ -5,6 +5,15 @@ SHOW_SOCIAL_ON_INDEX_PAGE_HEADER = True
 SITEURL = ''
 
 PATH = 'content'
+ARTICLE_PATHS = ['blog']
+ARTICLE_SAVE_AS = '{date:%Y}/{slug}/index.html'
+ARTICLE_URL = '{date:%Y}/{slug}/'
+
+DISPLAY_PAGES_ON_MENU = True
+
+DEFAULT_METADATA = {
+    'status': 'draft',
+}
 
 TIMEZONE = 'Asia/Yekaterinburg'
 

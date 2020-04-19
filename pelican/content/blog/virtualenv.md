@@ -1,7 +1,10 @@
-title: Виртуальные окружения в Python
-slug: python_virtualenv
-tags: python, pip, venv, virtualenv
-date: 2020-04-18
+Title: Виртуальные окружения в Python
+Slug: python_virtualenv
+Tags: python, pip, venv, virtualenv
+Date: 2020-04-18 12:00
+Modified: 2020-04-19 12:30
+Summary: Почему всегда нужно использовать виртуальные окружения и как правильно их готовить.
+Status: published
 
 Python знаменит своей обширной стандартной библиотекой и девизом
 "батарейки в комплекте"
