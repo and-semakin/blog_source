@@ -21,8 +21,7 @@ EXTRA_PATH_METADATA = {
     'extra/favicon_32.png': {'path': 'favicon_32.png'},
     'extra/CNAME': {'path': 'CNAME'},
     'extra/.nojekyll': {'path': '.nojekyll'},
-    # 'extra/LICENSE': {'path': 'LICENSE'},
-    # 'extra/README': {'path': 'README'},
+    'extra/README.md': {'path': 'README.md'},
 }
 
 DEFAULT_CATEGORY = 'blog'
