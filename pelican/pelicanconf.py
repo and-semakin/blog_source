@@ -22,6 +22,7 @@ EXTRA_PATH_METADATA = {
     'extra/CNAME': {'path': 'CNAME'},
     'extra/.nojekyll': {'path': '.nojekyll'},
     'extra/README.md': {'path': 'README.md'},
+    'extra/robots.txt': {'path': 'robots.txt'},
 }
 
 DEFAULT_CATEGORY = 'blog'
