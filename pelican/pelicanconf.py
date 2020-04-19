@@ -19,7 +19,7 @@ EXTRA_PATH_METADATA = {
     'extra/favicon_16.png': {'path': 'favicon_16.png'},
     'extra/favicon_24.png': {'path': 'favicon_24.png'},
     'extra/favicon_32.png': {'path': 'favicon_32.png'},
-    # 'extra/CNAME': {'path': 'CNAME'},
+    'extra/CNAME': {'path': 'CNAME'},
     # 'extra/LICENSE': {'path': 'LICENSE'},
     # 'extra/README': {'path': 'README'},
 }
