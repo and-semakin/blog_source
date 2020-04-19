@@ -116,6 +116,12 @@
                         {% endif %}
                         {% import 'translations.html' as translations with context %}
                         {{ translations.translations_for(article) }}
+                        {% if SHOW_READ_TIME %}
+                            <span class="meta">
+                                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                {{ article.stats['read_mins'] }} {{ PLURAL_MINUTE(article.stats['read_mins']) }}
+                            </span>
+                        {% endif %}
                     </div>
                 </div>
             </div>

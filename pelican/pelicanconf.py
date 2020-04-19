@@ -1,3 +1,8 @@
+import functools
+
+import plural_ru
+
+
 AUTHOR = 'and-semakin'
 SITENAME = 'Питонические атаки'
 SITESUBTITLE = 'Про разработку в целом и в частности про Python'
@@ -58,7 +63,7 @@ COLOR_SCHEME_CSS = 'monokai.css'
 UTTERANCES_REPO = 'and-semakin/and-semakin.github.io'
 
 PLUGIN_PATHS = ["plugins"]
-PLUGINS = ["sitemap", "deadlinks", "filetime_from_git"]
+PLUGINS = ["sitemap", "deadlinks", "filetime_from_git", "post_stats"]
 
 SITEMAP = {
     'format': 'xml',
@@ -83,3 +88,6 @@ DEADLINK_OPTS = {
 }
 
 GIT_FILETIME_FROM_GIT = True
+
+SHOW_READ_TIME = True
+PLURAL_MINUTE = functools.partial(plural_ru.ru, quantitative=["минута", "минуты", "минут"])
