@@ -8,6 +8,8 @@ authors = ["Andrey Semakin <and-semakin@ya.ru>"]
 python = "^3.8"
 pelican = "^4.2.0"
 Markdown = "^3.2.1"
+bs4 = "^0.0.1"
+requests = "^2.23.0"
 
 [tool.poetry.dev-dependencies]
 

@@ -58,7 +58,7 @@ COLOR_SCHEME_CSS = 'monokai.css'
 UTTERANCES_REPO = 'and-semakin/and-semakin.github.io'
 
 PLUGIN_PATHS = ["plugins"]
-PLUGINS = ["sitemap"]
+PLUGINS = ["sitemap", "deadlinks"]
 
 SITEMAP = {
     'format': 'xml',
@@ -72,4 +72,12 @@ SITEMAP = {
         'indexes': 'daily',
         'pages': 'monthly'
     }
+}
+DEADLINK_VALIDATION = False
+DEADLINK_OPTS = {
+    'archive': True,
+    'classes': [],
+    'labels': False,
+    'timeout_duration_ms': 10000,
+    'timeout_is_error': True,
 }
