@@ -155,4 +155,16 @@
             <noscript>Please enable JavaScript to view the comments.</noscript>
         </div>
     {% endif %}
+
+    {% if UTTERANCES_REPO and article.status != "draft" %}
+        <script
+            src="https://utteranc.es/client.js"
+            repo="{{ UTTERANCES_REPO }}"
+            issue-term="pathname"
+            label="comments"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+        </script>
+    {% endif %}
 {% endblock content %}

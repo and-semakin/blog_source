@@ -41,10 +41,6 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-# Blogroll
-LINKS = (('Pelican', 'http://getpelican.com/'),
-         ('Python.org', 'http://python.org/'),)
-
 # Social widget
 SOCIAL = (('github', 'https://github.com/and-semakin'),
           ('telegram', 'https://t.me/bro0ke'),
@@ -57,3 +53,5 @@ RELATIVE_URLS = True
 
 THEME = 'themes/pelican-clean-blog'
 COLOR_SCHEME_CSS = 'monokai.css'
+
+UTTERANCES_REPO = 'and-semakin/and-semakin.github.io'
