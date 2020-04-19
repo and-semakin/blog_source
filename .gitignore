@@ -9,3 +9,6 @@ pelican/output
 # IDE
 .idea/
 .vscode/
+
+# MacOS
+.DS_Store
