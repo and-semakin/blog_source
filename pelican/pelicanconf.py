@@ -55,3 +55,20 @@ THEME = 'themes/pelican-clean-blog'
 COLOR_SCHEME_CSS = 'monokai.css'
 
 UTTERANCES_REPO = 'and-semakin/and-semakin.github.io'
+
+PLUGIN_PATHS = ["plugins"]
+PLUGINS = ["sitemap"]
+
+SITEMAP = {
+    'format': 'xml',
+    'priorities': {
+        'articles': 0.5,
+        'indexes': 0.5,
+        'pages': 0.5
+    },
+    'changefreqs': {
+        'articles': 'monthly',
+        'indexes': 'daily',
+        'pages': 'monthly'
+    }
+}
