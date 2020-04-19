@@ -3,7 +3,13 @@ Slug: about
 Status: published
 
 <p align="center">
-    <img src="{static}photo-circle.png" width="250" height="250" alt="Моё довольное лицо"/>
+    <img
+        src="{static}photo-circle.png"
+        width="250"
+        height="250"
+        alt="Моё довольное лицо и щека жены"
+        title="Моё довольное лицо и щека жены"
+    />
 </p>
 
 Привет! Меня зовут Андрей Семакин. Я программист.
