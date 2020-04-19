@@ -1,5 +1,6 @@
 title: Виртуальные окружения в Python
 slug: python_virtualenv
+tags: python, pip, venv, virtualenv
 date: 2020-04-18
 
 Python знаменит своей обширной стандартной библиотекой и девизом
