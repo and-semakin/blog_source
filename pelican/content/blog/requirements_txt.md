@@ -280,4 +280,12 @@ urllib3==1.25.9
 * А ещё [бывают `constraints.txt`](https://pip.pypa.io/en/stable/user_guide/#constraints-files);
 * Бонус: PyCharm [умеет умно обновлять `requirements.txt`](https://www.jetbrains.com/help/pycharm/managing-dependencies.html).
 
+## Подпишитесь!
+
+Чтобы получить уведомление о новом посте можно:
+
+* [подписаться на канал в Telegram](https://t.me/pythonic_attacks)
+([альтернативная](https://tele.click/pythonic_attacks) [ссылка](https://tele.gg/pythonic_attacks));
+* [подписаться на Atom-фид](/feeds/all.atom.xml), если <s>вы олдфаг-старовер</s> вам так удобно.
+
 *Обложка: [Joe deSousa, Gnarled Tree](https://www.flickr.com/photos/mustangjoe/14675770684)*
