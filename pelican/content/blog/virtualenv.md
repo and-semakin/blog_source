@@ -398,8 +398,17 @@ error: could not create '/lib/python2.7/site-packages/poetry': Permission denied
     $ pip install --user poetry  # без sudo!
     ```
 
-    Нужно только убедиться, что нужная директория перечислена в переменной `$PATH`
-    — в моём случае это `~/.local/bin`.
+    Обязательно нужно убедиться, что директория, куда установится пакет,
+    перечислена в переменной `$PATH`. Путь к директории можно получить при помощи
+    следующей команды:
+    
+        $ python -m site --user-base
+        /Users/and-semakin/.local
+        
+    К получившемуся пути нужно в конце добавить `/bin` для Linux и MacOS,
+    либо `\Scripts` для Windows, так что
+    в моём случае (MacOS) в `$PATH` нужно добавить вот такой путь:
+    `/Users/and-semakin/.local/bin`.
 
 2. установить программу через пакетный менеджер ОС, например:
 
