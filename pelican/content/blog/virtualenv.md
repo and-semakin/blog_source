@@ -409,6 +409,8 @@ error: could not create '/lib/python2.7/site-packages/poetry': Permission denied
     либо `\Scripts` для Windows, так что
     в моём случае (MacOS) в `$PATH` нужно добавить вот такой путь:
     `/Users/and-semakin/.local/bin`.
+    
+    Подробнее про этот метод установки читайте [здесь](https://pip.pypa.io/en/stable/user_guide/#user-installs).
 
 2. установить программу через пакетный менеджер ОС, например:
 
