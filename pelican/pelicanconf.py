@@ -3,7 +3,7 @@ import functools
 import plural_ru
 
 
-AUTHOR = 'and-semakin'
+AUTHOR = 'Андрей Семакин'
 SITENAME = 'Питонические атаки'
 SITESUBTITLE = 'Про разработку в целом и про Python в частности'
 SHOW_SOCIAL_ON_INDEX_PAGE_HEADER = True
