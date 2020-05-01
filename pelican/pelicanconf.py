@@ -5,7 +5,7 @@ import plural_ru
 
 AUTHOR = 'and-semakin'
 SITENAME = 'Питонические атаки'
-SITESUBTITLE = 'Про разработку в целом и в частности про Python'
+SITESUBTITLE = 'Про разработку в целом и про Python в частности'
 SHOW_SOCIAL_ON_INDEX_PAGE_HEADER = True
 SITEURL = ''
 SLUGIFY_SOURCE = 'basename'
