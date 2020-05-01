@@ -1,8 +1,19 @@
 <p class="copyright text-muted">
     {%- if CC_LICENSE or CC_LICENSE_DERIVATIVES or CC_LICENSE_COMMERCIAL %}
-    {% from 'cc-tools/cc-license.html' import cc_license_mark %}
+        {% from 'cc-tools/cc-license.html' import cc_license_mark %}
         {{ cc_license_mark(cc_name=CC_LICENSE,derivatives=CC_LICENSE_DERIVATIVES,commercial=CC_LICENSE_COMMERCIAL,attr_markup=CC_ATTR_MARKUP,attr_props={'title':SITENAME,'name':article.author if article else AUTHOR,'url':SITEURL}) }}
     {% else %}
+        {% if articles %}
+            {% set first_article_year = dates[-1].date.strftime('%Y') %}
+            {% set last_article_year = dates[0].date.strftime('%Y') %}
+            {% if first_article_year != last_article_year %}
+                {% set copy_date = first_article_year + "–" +  last_article_year %}
+            {% else %}
+                {% set copy_date = last_article_year %}
+            {% endif %}
+        {% else %}
+            {% set copy_date = '' %}
+        {% endif %}
         &copy; {{ copy_date }} {{ AUTHOR }}
     {% endif %}
 </p>
