@@ -91,3 +91,5 @@ GIT_FILETIME_FROM_GIT = True
 
 SHOW_READ_TIME = True
 PLURAL_MINUTE = functools.partial(plural_ru.ru, quantitative=["минута", "минуты", "минут"])
+
+DISABLE_CUSTOM_THEME_JAVASCRIPT = False
