@@ -14,6 +14,7 @@ gitpython = "^3.1.1"
 plural-ru = "^2019.4.13"
 
 [tool.poetry.dev-dependencies]
+black = "^19.10b0"
 
 [build-system]
 requires = ["poetry>=0.12"]
