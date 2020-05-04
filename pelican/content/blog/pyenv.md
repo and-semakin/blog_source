@@ -430,3 +430,5 @@ In [1]:
 * [Репозиторий проекта на GitHub](https://github.com/pyenv/pyenv);
 * [Туториал на RealPython](https://realpython.com/intro-to-pyenv/);
 * [Альтернатива: универсальный менеджер версий `asdf`](https://asdf-vm.com/#/).
+
+*Обложка: [Schwoaze, Snakes Black Snakes Animal Free Photo](https://www.needpix.com/photo/download/1191596/snakes-black-snakes-animal-reptile-free-pictures-free-photos-free-images-royalty-free-free-illustrations)*
