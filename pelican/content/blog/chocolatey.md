@@ -57,7 +57,7 @@ Chocolatey написан на C# и PowerShell, имеет
 
 1. Нажимаем на клавиатуре кнопку Win или просто открываем меню "Пуск";
 2. Набираем `cmd`;
-3. На найденной программе нажимаем правой кнопкой мыши;
+3. На найденной программе нажимаем правой кнопкой мыши
 и выбираем пункт “Run as administrator” или, в русской локализации,
 “Запуск от имени администратора”.
 
@@ -115,7 +115,7 @@ choco install -y googlechrome firefox
 choco install -y notepadplusplus.install vscode
 ```
 
-Я являюсь заядлым пользователем PyCharm, который лучше всего установить
+Я являюсь заядлым пользователем PyCharm, который лучше всего устанавливать
 через [JetBrains Toolbox](https://www.jetbrains.com/ru-ru/toolbox-app/)
 (как и любые другие IDE от JetBrains):
 
