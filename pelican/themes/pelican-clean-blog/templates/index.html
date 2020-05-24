@@ -65,7 +65,11 @@
                 {% endif %}
                 </p>
             {% endif %}
-            <p class="post-meta">{{ article.locale_date }}</p>
+            <p class="post-meta">
+                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                {{ article.stats['read_mins'] }} {{ PLURAL_MINUTE(article.stats['read_mins']) }},
+                опубликовано {{ article.locale_date }}
+            </p>
             {% include 'comments.html' %}
         </div>
     {% endfor %}

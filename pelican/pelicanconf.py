@@ -9,6 +9,7 @@ SITESUBTITLE = "Про разработку в целом и про Python в ч
 SHOW_SOCIAL_ON_INDEX_PAGE_HEADER = True
 SITEURL = ""
 SLUGIFY_SOURCE = "basename"
+DEFAULT_DATE_FORMAT = ("ru_RU", '%d %B %Y, %a')
 
 PATH = "content"
 ARTICLE_PATHS = ["blog"]
