@@ -56,7 +56,7 @@ print "world!"
 # выводит: Hello world!
 
 # если сделать специальный импорт из “будущего”, то
-# в Python 2.7 `print` начинает работать как функция:
+# в Python 2.6+ `print` начинает работать как функция:
 from __future__ import print_function
 print("Hello", "world!")
 # выводит: Hello world!
