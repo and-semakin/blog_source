@@ -51,6 +51,9 @@ AUTHOR_FEED_RSS = None
 # Social widget
 SOCIAL = (("rss", "/feeds/all.atom.xml"), ("telegram", "https://t.me/pythonic_attacks"))
 
+# Menu items
+MENUITEMS = [("Тэги", "/tags.html")]
+
 DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
@@ -88,3 +91,11 @@ PLURAL_MINUTE = functools.partial(
 )
 
 DISABLE_CUSTOM_THEME_JAVASCRIPT = False
+
+
+def sort_by_number_of_articles(tags):
+    return sorted(tags, reverse=True, key=lambda tag: len(tag[1]))
+
+
+# Custom filters
+JINJA_FILTERS = {'sort_by_number_of_articles': sort_by_number_of_articles}
