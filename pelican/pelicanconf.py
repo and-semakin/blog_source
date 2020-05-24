@@ -62,21 +62,23 @@ COLOR_SCHEME_CSS = "monokai.css"
 UTTERANCES_REPO = "and-semakin/and-semakin.github.io"
 
 PLUGIN_PATHS = ["plugins"]
-PLUGINS = ["sitemap", "deadlinks", "filetime_from_git", "post_stats"]
+PLUGINS = ["sitemap", "filetime_from_git", "post_stats"]
+# disabled plugins:
+# * deadlinks
 
 SITEMAP = {
     "format": "xml",
     "priorities": {"articles": 0.5, "indexes": 0.5, "pages": 0.5},
     "changefreqs": {"articles": "monthly", "indexes": "daily", "pages": "monthly"},
 }
-DEADLINK_VALIDATION = False
-DEADLINK_OPTS = {
-    "archive": True,
-    "classes": [],
-    "labels": False,
-    "timeout_duration_ms": 10000,
-    "timeout_is_error": True,
-}
+# DEADLINK_VALIDATION = False
+# DEADLINK_OPTS = {
+#     "archive": True,
+#     "classes": [],
+#     "labels": False,
+#     "timeout_duration_ms": 10000,
+#     "timeout_is_error": True,
+# }
 
 GIT_FILETIME_FROM_GIT = True
 
