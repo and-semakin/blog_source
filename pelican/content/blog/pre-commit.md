@@ -1,4 +1,4 @@
-Title: Запуск git-хуков при помощи pre-commit
+Title: Запуск Git-хуков при помощи pre-commit
 Tags: python, pre-commit, git
 Summary: Git-хуки позволяют автоматизировать запуск различных проверок (линтеры, форматтеры, тесты) при работе с системой контроля версий.
 Header_cover: /static/hook.jpg
