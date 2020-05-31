@@ -4,13 +4,13 @@
     <ul class="pager">
         <li class="next">
             {% if articles_page.has_next() %}
-                <a href="{{ SITEURL }}/{{ articles_next_page.url }}">Older Posts &rarr;</a>
+                <a href="{{ SITEURL }}/{{ articles_next_page.url }}">Старые посты &rarr;</a>
             {% endif %}
             {% if articles_page.has_previous() %}
-                <a href="{{ SITEURL }}/{{ articles_previous_page.url }}"> &larr; Newest Posts</a>
+                <a href="{{ SITEURL }}/{{ articles_previous_page.url }}"> &larr; Новые посты</a>
             {% endif %}
         </li>
     </ul>
-    Page {{ articles_page.number }} / {{ articles_paginator.num_pages }}
+    Страница {{ articles_page.number }} из {{ articles_paginator.num_pages }}
     <hr>
 {% endif %}
