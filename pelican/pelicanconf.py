@@ -100,3 +100,15 @@ def sort_by_number_of_articles(tags):
 
 # Custom filters
 JINJA_FILTERS = {'sort_by_number_of_articles': sort_by_number_of_articles}
+
+# Custom Markdown config.
+# See MARKDOWN here:
+# https://docs.getpelican.com/en/stable/settings.html#basic-settings
+MARKDOWN = {
+    'extension_configs': {
+        'markdown.extensions.codehilite': {'css_class': 'highlight'},
+        'markdown.extensions.meta': {},
+        'pymdownx.extra': {},
+    },
+    'output_format': 'html5',
+}

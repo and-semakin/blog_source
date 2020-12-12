@@ -12,6 +12,7 @@ bs4 = "^0.0.1"
 requests = "^2.23.0"
 gitpython = "^3.1.1"
 plural-ru = "^2019.4.13"
+pymdown-extensions = "^8.0.1"
 
 [tool.poetry.dev-dependencies]
 black = "^19.10b0"
