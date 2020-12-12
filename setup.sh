@@ -18,9 +18,5 @@ if [[ ! -d pelican-themes ]]; then
 fi
 
 if [[ ! -d deploy ]]; then
-    mkdir deploy
-    cd deploy
-    git init
-    git remote add origin git@github.com:and-semakin/and-semakin.github.io.git
+    git clone git@github.com:and-semakin/and-semakin.github.io.git deploy
 fi
-
