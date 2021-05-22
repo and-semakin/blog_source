@@ -270,46 +270,43 @@ VPN — это клиент-серверный протокол. Наш роут
 [поддержка WireGuard была добавлена в основной состав ядра Linux](
 https://www.opennet.ru/opennews/art.shtml?num=52275).
 Погуглите, выбор сервисов действительно есть. Сейчас я пользуюсь
-[AzireVPN](https://www.azirevpn.com/), и меня пока что всё устраивает.
+[RedShieldVPN](https://redshieldvpn.com/?r=d4KqAm7U6rHB4kdEwuDD), и меня пока
+что всё устраивает.
 
 **Бонус для читателей**: при регистрации
-[по этой ссылке](https://www.azirevpn.com/ref/30ePwqelRO) вам накинут бесплатных
-дней обслуживания при оплате определенного периода сразу — +4 дня к месяцу,
-+15 дней к трём месяцам. За оплату большего периода дают пропорционально ещё
-больше бесплатных дней. Кстати, этот VPN можно использовать не только на роутере,
-у него есть клиенты и для всех основных платформ.
+[по этой ссылке](https://redshieldvpn.com/?r=d4KqAm7U6rHB4kdEwuDD) вам подарят
+месяц бесплатного VPN.
 
-Дальше буду описывать процесс для AzireVPN, но, думаю, для других подобных сервисов
-процесс должен быть похожим.
+Дальше буду описывать процесс для RedShieldVPN, но, думаю, для других подобных
+сервисов процесс должен быть похожим.
 
-1. Переходим [в раздел "Конфигурации"](https://www.azirevpn.com/cfg/wireguard),
-    авторизуемся и скачиваем конфиги.
+1. Переходим [в раздел WireGuard](https://my.redshieldvpn.com/manual/wg),
+    авторизуемся, выбираем страну и скачиваем конфиг. Я обычно выбираю какую-нибудь
+    европейскую страну, чтобы пинг был приемлемым. В этот раз возьму Финляндию.
 
-2. Из получившегося ZIP-архива выколупываем конфиг для страны, через которую хотим
-    пускать свой трафик. Я обычно выбираю какую-нибудь европейскую страну, чтобы пинг
-    был приемлемым. В этот раз возьму Норвегию.
-
-    Вот такой файл конфигурации мы извлекли из архива (ключи я заменил):
+    Вот примерно такой файл конфигурации скачался (ключи я заменил):
 
     ```cfg
     [Interface]
+    Address = 10.7.1.177/32, 6343:72e7:7ac3:e245:2675:1b79:4638:193a/128
     PrivateKey = private_key_goes_here
-    Address = 10.0.30.134/19, 2a0c:dd43:1:2000::1e87/64
-    DNS = 10.0.0.1, 2a0c:dd43:1:2000::1
+    DNS = 10.254.254.254
+    MTU = 1412
 
     [Peer]
     PublicKey = public_key_goes_here
     AllowedIPs = 0.0.0.0/0, ::/0
-    Endpoint = no1.wg.azirevpn.net:51820
+    Endpoint = fin.lopata.today:51820
+    PersistentKeepalive = 10
     ```
 
-3. Переключимся на роутер и установим там нужную зависимость:
+2. Переключимся на роутер и установим там нужную зависимость:
 
     ```sh
     opkg install wireguard
     ```
 
-4. Дальше нужно настроить сеть. Это происходит в файле `/etc/config/network`.
+3. Дальше нужно настроить сеть. Это происходит в файле `/etc/config/network`.
 Открываем его при помощи `vi` (если не умеете пользоваться этим редактором, то
 лучше предварительно
 [почитайте что-нибудь](https://losst.ru/kak-polzovatsya-tekstovym-redaktorom-vim)
@@ -318,7 +315,7 @@ https://www.opennet.ru/opennews/art.shtml?num=52275).
     ```text
     config interface 'wg0'
         option private_key 'private_key_goes_here'
-        list addresses '10.0.25.230/19'
+        list addresses '10.7.1.177/32'
         option listen_port '51820'
         option proto 'wireguard'
 
@@ -326,8 +323,8 @@ https://www.opennet.ru/opennews/art.shtml?num=52275).
         option public_key 'public_key_goes_here'
         option allowed_ips '0.0.0.0/0'
         option route_allowed_ips '0'
-        option persistent_keepalive '25'
-        option endpoint_host 'no1.wg.azirevpn.net'
+        option persistent_keepalive '10'
+        option endpoint_host 'fin.lopata.today'
         option endpoint_port '51820'
     ```
 
@@ -338,27 +335,27 @@ https://www.opennet.ru/opennews/art.shtml?num=52275).
     в поля `endpoint_host` и `endpoint_port` в конфиге OpenWRT.
     Остальные поля статичные.
 
-5. Перезапустим сеть на роутере:
+4. Перезапустим сеть на роутере:
 
     ```sh
     /etc/init.d/network restart
     ```
 
-6. Проверим VPN:
+5. Проверим VPN:
 
     ```sh
     # wg show
     interface: wg0
-    public key: Kxn5CpI6wu+U5+ChMCNY/5Xs9DfoZ691G6OSX2V4HSU=
+    public key: C4zR9CoziizrJcPFtcUg4yyyG1S6+a+/bAuGi2BpmlM=
     private key: (hidden)
     listening port: 51820
 
-    peer: OsswT7RVN/M8jpDoARlsPshjtIr0R/1g3NAyCTl/4BY=
-    endpoint: 194.32.146.82:51820
+    peer: public_key_goes_here
+    endpoint: 185.103.110.133:51820
     allowed ips: 0.0.0.0/0
-    latest handshake: 44 seconds ago
+    latest handshake: 33 seconds ago
     transfer: 1012 B received, 3.53 KiB sent
-    persistent keepalive: every 25 seconds
+    persistent keepalive: every 10 seconds
     ```
 
     Если команда `wg show` выводит что-то подобное, то всё идёт хорошо.
